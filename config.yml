@@ -8,7 +8,7 @@ site:
     # logo: /path/to/your/site/logo
 
     # Site cover
-    cover: /assets/img/cover.jpg
+    cover: /uno-zen/assets/img/cover.jpg
 
     # Base url
     url: https://zqqf16.github.io/uno-zen
