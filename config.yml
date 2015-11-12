@@ -1,0 +1,71 @@
+# Site configurations
+site:
+
+    # Site title
+    title: Peanut
+
+    # Site logo
+    # logo: /path/to/your/site/logo
+
+    # Site cover
+    cover: /assets/img/cover.jpg
+
+    # Base url
+    url: https://zqqf16.github.io/uno-zen
+
+    # Description
+    description: Uno Zen for Peanut
+
+# Author configurations
+author:
+
+    # Author name
+    name: zqqf16
+
+    # Author avatar url
+    avatar: http://s.gravatar.com/avatar/4062f9b2373a5519a3b97012489d4bc1?s=80
+
+    # Author url
+    url: http://blog.zorro.im
+
+    # Author bio
+    # bio: your bio
+
+    # Author location
+    # location: Beijing, China
+
+
+# Path configurations
+# path:
+    # Draft path
+    # draft: drafts
+
+    # Post url template
+    # post: posts/{slug}.html
+
+    # Tag url template
+    # tag: tags/{title}/
+
+    # Pagination url template
+    # pagination: page/{num}/
+
+    # Sitemap url
+    # sitemap: sitemap.xml
+
+    # RSS url
+    # rss: rss.xml
+
+    # Assert files url
+    # asset: /assets/
+
+# Whether to create sitemap or not
+# sitemap: True
+
+# Whether to create rss or not
+# rss: True
+
+# Theme name or path
+theme: uno-zen
+
+# How many posts each page.
+# pagination: 10
