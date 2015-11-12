@@ -1,0 +1,16 @@
+<nav class="navigation left">
+  <ul class="links">
+
+    <li class="nav-blog">
+      <a href="/#open" title="{{site.title}} blog">Blog</a>
+    </li>
+
+    {% if site.links %}
+      {% for link in site.links %}
+      <li class="nav-link">
+        <a href="{{link.url}}">{{link.title}}</a>
+      </li>
+      {% endfor %}
+    {% endif %}
+  </ul>
+</nav>

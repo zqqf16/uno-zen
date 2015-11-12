@@ -1,0 +1,27 @@
+{% extends "default.html" %}
+{% block body_class %}{% if page.page != 1 %}archive-template{% else %}home-template{% endif %}{% endblock %}
+{% block body %}
+<ol class="posts">
+  {% for post in posts %}
+  <li>
+    <a href="{{post.url}}" title="link to {{post.title}}">
+      <h2>{{post.title}}</h2>
+      <p class="post description">{{post.excerpt}}&hellip;</p>
+    </a>
+    <div class="post meta">
+      <time datetime="{{post.date|strftime('%Y-%m-%d')}}">{{post.date|strftime('%Y-%m-%d')}}</time>
+      <span class="post tags">
+      {% if post.tags %}
+          {{ " on " }}
+          {% for tag in post.tags %}
+          <a href="{{ tag.url }}"> {{ tag.title }} </a>
+          {% endfor %}
+      {% endif %}
+      </span>
+    </div>
+    <hr class="divider post" />
+  </li>
+  {% endfor %}
+</ol>
+{% include 'pagination.html' %}
+{% endblock %}

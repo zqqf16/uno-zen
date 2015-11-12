@@ -1,0 +1,27 @@
+{% extends "default.html" %}
+{% block body %}
+
+<h1>Tag: {{tag.name}}</h1>
+<ol class="posts">
+  {% for post in posts %}
+  <li>
+    <a href="{{post.url}}" title="link to {{post.title}}"><h2>{{post.title}}</h2></a>
+    <p class="excerpt">{{post.excerpt}}&hellip;</p>
+    <div class="post meta">
+      <time datetime="{{post.date|strftime('%Y-%m-%d')}}">{{post.date|strftime('%Y-%m-%d')}}</time>
+      <span class="post tags">
+      {% if post.tags %}
+          {{ "on " }}
+          {% for t in post.tags %}
+          <a href="{{ t.url }}"> {{ t.title }} </a>
+          {% endfor %}
+      {% endif %}
+      </span>
+    </div>
+    <hr class="divider post" />
+  </li>
+  {% endfor %}
+</ol>
+
+{% include 'pagination.html' %}
+{% endblock %}

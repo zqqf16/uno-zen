@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{site.title}}</title>
+    {% include 'meta.html' %}
+    <link rel="stylesheet" type="text/css" href="{{"css/pygments.css"|asset}}" />
+    <link rel="stylesheet" type="text/css" href="{{"css/uno-zen.css"|asset}}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    {% include 'aside.html' %}
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        {% block body %}{% endblock %}
+        {% include 'footer.html' %}
+      </section>
+    </main>
+    <script src="{{ 'js/jquery-1.11.3.min.js'|asset }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ 'js/uno-zen.js'|asset }}" type="text/javascript" charset="utf-8"></script>
+    {% include 'google-analytics.html' %}
+  </body>
+</html>

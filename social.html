@@ -1,0 +1,25 @@
+<nav class="navigation right">
+  <ul class="social expanded">
+  {% if author.socials %}
+    {% for social in author.socials %}
+    <li class="social item hvr-grow-rotate">
+      <a rel="me" target="blank" href="{{social.url}}" title="{{social.name}}">
+        {% if social.icon %}
+        <i class='fa fa-{{social.icon}}'></i>
+        {% endif %}
+        <span class="label">{{social.name}}</span>
+      </a>
+    </li>
+    {% endfor %}
+  {% endif %}
+
+  <!-- RSS -->
+  <li class="social item hvr-grow-rotate">
+    <a href="/rss.xml" title="Subscribe to RSS">
+      <i class='fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
